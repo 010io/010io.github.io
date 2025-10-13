@@ -1,6 +1,9 @@
 # Jekyll конфігурація
 title: Вітаю на 010io!
 description: Персональний сайт для демонстрації AI/тестових проєктів
-theme: jekyll-theme-minimal
+theme: jekyll-theme-slate
 show_downloads: false
 markdown: kramdown
+
+# Додаткові налаштування для темної теми
+color_scheme: dark
