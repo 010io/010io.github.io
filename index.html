@@ -6,36 +6,50 @@
     <title>010io - GitHub Pages</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #0d1117;
+            color: #c9d1d9;
         }
-        h1, h2 {
-            color: #333;
+        h1, h2, h3 {
+            color: #58a6ff;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 10px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #21262d;
+            margin: 20px 0;
         }
         a {
-            color: #0066cc;
+            color: #58a6ff;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        .section {
-            background: white;
-            padding: 20px;
+        blockquote {
+            border-left: 4px solid #58a6ff;
+            padding-left: 20px;
             margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #8b949e;
+            background-color: #161b22;
+            padding: 15px 20px;
+            border-radius: 6px;
         }
-        .bluesky-section {
-            background: white;
-            padding: 20px;
+        blockquote p {
+            margin: 5px 0;
+        }
+        .navigation {
+            text-align: center;
+            font-size: 1.1em;
             margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navigation strong {
+            margin: 0 10px;
         }
         ul {
             list-style-type: none;
@@ -44,52 +58,114 @@
         ul li {
             padding: 5px 0;
         }
+        .bluesky-embed-container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #161b22;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
-    <h1>Вітаємо на 010io.github.io</h1>
-    
-    <div class="section">
-        <h2>ℹ️ Про проєкт</h2>
-        <p>Це сторінка організації 010io на GitHub Pages. Тут ми ділимося проєктами з AI, машинного навчання та програмування.</p>
-        <p>Слідкуйте за нашими оновленнями та приєднуйтесь до розробки!</p>
-    </div>
-    
-    <!-- Bluesky Embed -->
-    <div class="bluesky-section">
-        <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:lacbc2nuvnxryq3zc5j5cmxw/app.bsky.feed.post/3m36tc57ryk2j" data-bluesky-cid="bafyreigjjc4sveiv75insmiyjkltlhvw6yfnr6feh73x7zw72cgas4c3lq" data-bluesky-embed-color-mode="dark"><p lang="uk">...</p></blockquote>
-        <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-    </div>
-    
-    <div class="section">
-        <h2>🤖 AI-проєкти</h2>
-        <ul>
-            <li>🧠 <a href="https://github.com/010io/neural-networks">Neural Networks</a> - Імплементація нейронних мереж</li>
-            <li>🔮 <a href="https://github.com/010io/ml-algorithms">ML Algorithms</a> - Алгоритми машинного навчання</li>
-            <li>💬 <a href="https://github.com/010io/chatbot">Chatbot</a> - Розумний чат-бот</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h2>📚 Навчальні матеріали</h2>
-        <ul>
-            <li>📖 <a href="https://github.com/010io/python-basics">Python Basics</a> - Основи Python</li>
-            <li>🎓 <a href="https://github.com/010io/data-science">Data Science</a> - Наука про дані</li>
-            <li>💻 <a href="https://github.com/010io/web-development">Web Development</a> - Веб-розробка</li>
-        </ul>
-    </div>
-    
-    <div class="section">
-        <h2>🔗 Корисні ресурси</h2>
-        <ul>
-            <li>📝 <a href="https://github.com/010io/010io.github.io/wiki">Wiki</a> - База знань</li>
-            <li>🛠️ <a href="https://github.com/010io/tools">Tools</a> - Корисні інструменти</li>
-            <li>📊 <a href="https://github.com/010io/datasets">Datasets</a> - Набори даних</li>
-        </ul>
-    </div>
-    
-    <footer style="text-align: center; margin-top: 40px; color: #666;">
-        <p>© 2025 010io | <a href="https://github.com/010io">GitHub</a></p>
-    </footer>
+
+<h1>Вітаю на 010io!</h1>
+<hr>
+
+<h2>📑 Навігація</h2>
+<div class="navigation">
+<strong><a href="#-ai-проєкти">🤖 AI-проєкти</a></strong> | <strong><a href="#-навчальні-матеріали">📚 Навчальні матеріали</a></strong> | <strong><a href="#-корисні-ресурси">🔗 Ресурси</a></strong> | <strong><a href="#-контакти--соціальні-мережі">📬 Контакти</a></strong><br>
+<a href="https://010io.zapier.app/">010io.zapier.app</a> - 010io-GPT
+</div>
+
+<hr>
+
+<blockquote>
+<p><strong>⚡️ 010io = Igor Omelchenko</strong> (Kharkiv 🇺🇦)</p>
+<p>Mesh-net arch, sys-int hustler, AI tinkerer, digital creator.</p>
+<p>💻 Android LLMs, Termux hacks, TP-Link/MiFi rigs, Python/JS/PowerShell — proper hands-on, no fluff.</p>
+<p>🎧 Drops code & beats: <a href="https://soundcloud.com/igor-omelchenko">soundcloud.com/igor-omelche...</a></p>
+</blockquote>
+
+<div class="bluesky-embed-container">
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:lacbc2nuvnxryq3zc5j5cmxw/app.bsky.feed.post/3m36tc57ryk2j" data-bluesky-cid="bafyreigjjc4sveiv75insmiyjkltlhvw6yfnr6feh73x7zw72cgas4c3lq">
+<p lang="uk">⚡️ 010io = Igor Omelchenko (Kharkiv 🇺🇦)
+
+Mesh-net arch, sys-int hustler, AI tinkerer, digital creator.
+
+💻 Android LLMs, Termux hacks, TP-Link/MiFi rigs, Python/JS/PowerShell — proper hands-on, no fluff.
+
+🎧 Drops code & beats: soundcloud.com/igor-omelche...<br><br>&mdash; IhorYan 🇺🇦🇮🇱🇦🇲 (@010io.bsky.social) <a href="https://bsky.app/profile/did:plc:lacbc2nuvnxryq3zc5j5cmxw/post/3m36tc57ryk2j?ref_src=embed">15 жовтня 2025 р. о 01:57</a></p>
+</blockquote>
+<script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+</div>
+
+<hr>
+
+<h2 id="-ai-проєкти">🤖 AI-проєкти</h2>
+<h3>🚧 В розробці:</h3>
+<ul>
+<li><strong>AI-асистент для навчання</strong> — чат-бот на базі LLM для відповідей на питання з програмування</li>
+<li><strong>Image Generation Demo</strong> — веб-інтерфейс для генерації зображень через Stable Diffusion</li>
+<li><strong>Text Summarizer</strong> — інструмент для автоматичного скорочення текстів</li>
+</ul>
+
+<h3>💡 Ідеї для майбутніх проєктів:</h3>
+<ul>
+<li>Sentiment Analysis Tool для українських текстів</li>
+<li>AI-помічник для code review</li>
+<li>Локальний RAG-додаток з використанням Ollama</li>
+</ul>
+
+<hr>
+
+<h2 id="-навчальні-матеріали">📚 Навчальні матеріали</h2>
+<p><strong>Шпаргалки</strong> — швидкий довідник з Python, PyTorch, TensorFlow</p>
+
+<h3>🐍 Python для ML/AI</h3>
+<ul>
+<li>NumPy основи</li>
+<li>Pandas для обробки даних</li>
+<li>Matplotlib & Seaborn візуалізація</li>
+</ul>
+
+<h3>🔥 Deep Learning</h3>
+<ul>
+<li>PyTorch швидкий старт</li>
+<li>TensorFlow/Keras гайди</li>
+<li>Transfer Learning техніки</li>
+</ul>
+
+<h3>🤖 LLM та NLP</h3>
+<ul>
+<li>LangChain best practices</li>
+<li>Prompt Engineering поради</li>
+<li>RAG (Retrieval-Augmented Generation)</li>
+</ul>
+
+<hr>
+
+<h2 id="-корисні-ресурси">🔗 Корисні ресурси</h2>
+<p>Рекомендовані платформи та інструменти для роботи з AI:</p>
+
+<h3>Платформи для AI/ML</h3>
+<ul>
+<li><a href="https://huggingface.co/">🤗 Hugging Face</a> — найбільша колекція pre-trained моделей та датасетів</li>
+<li><a href="https://github.com/">GitHub</a> — репозиторії open-source AI-проєктів</li>
+</ul>
+
+<hr>
+
+<h2 id="-контакти--соціальні-мережі">📬 Контакти & Соціальні мережі</h2>
+<ul>
+<li>GitHub: <a href="https://github.com/010io">@010io</a></li>
+<li>Bluesky: <a href="https://bsky.app/profile/did:plc:lacbc2nuvnxryq3zc5j5cmxw">@010io.bsky.social</a></li>
+<li>SoundCloud: <a href="https://soundcloud.com/igor-omelchenko">igor-omelchenko</a></li>
+<li>README: <a href="https://github.com/010io/010io.github.io/blob/main/README.md">view on GitHub</a></li>
+</ul>
+
+<footer style="text-align: center; margin-top: 40px; color: #8b949e; border-top: 1px solid #21262d; padding-top: 20px;">
+<p>© 2025 010io | Igor Omelchenko | Kharkiv 🇺🇦</p>
+</footer>
+
 </body>
 </html>
