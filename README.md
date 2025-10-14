@@ -10,6 +10,12 @@
  [010io.zapier.app](https://010io.zapier.app/)  - 010io-GPT
 ---
 
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:lacbc2nuvnxryq3zc5j5cmxw/app.bsky.feed.post/3m36tc57ryk2j" data-bluesky-cid="bafyreigjjc4sveiv75insmiyjkltlhvw6yfnr6feh73x7zw72cgas4c3lq" data-bluesky-embed-color-mode="dark"><p lang="uk">⚡️ 010io = Igor Omelchenko (Kharkiv 🇺🇦) Mesh‑net arch, sys‑int hustler, AI tinkerer, digital creator.
+
+💻 Android LLMs, Termux hacks, TP‑Link/MiFi rigs, Python/JS/PowerShell — proper hands‑on, no fluff. 🎧 Drops code &amp; beats: soundcloud.com/igor-omelche... |<br><br><a href="https://bsky.app/profile/did:plc:lacbc2nuvnxryq3zc5j5cmxw/post/3m36tc57ryk2j?ref_src=embed">[image or embed]</a></p>&mdash; IhorYan 🇺🇦🇮🇱🇦🇲 (<a href="https://bsky.app/profile/did:plc:lacbc2nuvnxryq3zc5j5cmxw?ref_src=embed">@010io.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:lacbc2nuvnxryq3zc5j5cmxw/post/3m36tc57ryk2j?ref_src=embed">15 жовтня 2025 р. о 01:57</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+
+
 ## 🤖 AI-проєкти
 
 ### 🚧 В розробці:
