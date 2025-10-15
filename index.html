@@ -36,114 +36,32 @@
             padding-left: 20px;
             margin: 20px 0;
             color: #8b949e;
-            background-color: #161b22;
-            padding: 15px 20px;
-            border-radius: 6px;
         }
-        blockquote p {
-            margin: 5px 0;
-        }
-        .navigation {
-            text-align: center;
-            font-size: 1.1em;
-            margin: 20px 0;
-        }
-        .navigation strong {
-            margin: 0 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            padding: 5px 0;
-        }
-        .bluesky-embed-container {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #161b22;
-            border-radius: 6px;
-        }
-        /* Glassmorphism Banner Styles */
-        .zapier-banner {
-            position: relative;
+        .chat-banner {
+            display: inline-block;
             margin: 30px 0;
-            padding: 3px 13px;
-            min-height: 20px;
-            background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 24px;
-            border: 1px solid rgba(88, 166, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
-                        inset 0 0 60px rgba(88, 166, 255, 0.05);
-            overflow: hidden;
-            animation: borderGlow 3s ease-in-out infinite;
-            cursor: pointer;
+            animation: pulse 2s ease-in-out infinite;
         }
-        .zapier-banner::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(88, 166, 255, 0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-            pointer-events: none;
+        .chat-banner button {
+            background: linear-gradient(135deg, #58a6ff 0%, #1f6feb 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+        }
+        .chat-banner button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(88, 166, 255, 0.4);
+        }
+        .chat-banner button:active {
+            transform: translateY(0);
         }
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.5;
-            }
-            50% {
-                transform: scale(1.2);
-                opacity: 0.8;
-            }
-        }
-        @keyframes borderGlow {
-            0%, 100% {
-                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
-                            inset 0 0 60px rgba(88, 166, 255, 0.05),
-                            0 0 20px rgba(88, 166, 255, 0.3);
-            }
-            50% {
-                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
-                            inset 0 0 60px rgba(88, 166, 255, 0.1),
-                            0 0 40px rgba(88, 166, 255, 0.5);
-            }
-        }
-        .banner-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 15px;
-        }
-        .banner-cta {
-            display: inline-block;
-            padding: 8px 20px;
-            background: linear-gradient(135deg, #58a6ff 0%, #8b5cf6 100%);
-            color: #ffffff;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.2em;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(88, 166, 255, 0.4);
-            animation: titlePulse 2s ease-in-out infinite;
-            border: none;
-            cursor: pointer;
-        }
-        .banner-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(88, 166, 255, 0.6);
-            text-decoration: none;
-        }
-        @keyframes titlePulse {
             0%, 100% {
                 opacity: 1;
             }
@@ -154,131 +72,36 @@
     </style>
 </head>
 <body>
-    <h1>🔥 Вітаю на 010io!</h1>
-    <h2>📑 Навігація</h2>
-    <div class="navigation">
-        <a href="#-ai-проєкти">🤖 AI-проєкти</a> | 
-        <a href="#-навчальні-матеріали">📚 Навчальні матеріали</a> | 
-        <a href="#-корисні-ресурси">🔗 Ресурси</a> | 
-        <a href="#-контакти--соціальні-мережі">📬 Контакти</a>
-        <br/>
-        <a href="https://010io.zapier.app/">010io.zapier.app</a> - 010io-GPT
+    <h1>010io - GitHub Pages</h1>
+    <p>Ласкаво просимо на сторінку 010io!</p>
+    
+    <hr>
+    
+    <h2>Про проект</h2>
+    <p>Це мінімалістична сторінка для демонстрації проектів та інтеграцій.</p>
+    
+    <!-- Minimal Animated Chat Banner -->
+    <div class="chat-banner">
+        <button onclick="window.zapierChat && window.zapierChat.open();">Chat-010io-GPT</button>
     </div>
-    <!-- Glassmorphism Banner -->
-    <!-- Анімований Glassmorphism банер, висота зменшена, кнопка-пульсар "Chat-010io-GPT" (popup) -->
-<style>
-.zapier-banner-mini {
-  position: relative;
-  margin: 16px 0 12px 0;
-  padding: 10px 0 4px 0;
-  min-height: 40px;
-  max-width: 340px;
-  background: linear-gradient(112deg,rgba(58,140,255,0.17) 0%,rgba(121,56,255,0.12) 100%);
-  backdrop-filter: blur(7.2px) saturate(140%);
-  border-radius: 17px;
-  border: 1.5px solid rgba(255,255,255,0.16);
-  box-shadow: 0 2px 24px #0097a726, 0 0 8px #5433ff70;
-  overflow: hidden;
-  animation: glassGlow 3.2s infinite alternate;
-  display:flex; align-items:center; justify-content:center;
-}
-@keyframes glassGlow {
-  0% {box-shadow:0 2px 24px #0097a72a,0 0 3px #5433ff32;}
-  70%{box-shadow:0 6px 32px #1997ef61,0 0 18px #5433ff55;}
-  100%{box-shadow:0 2px 24px #0097a726,0 0 8px #5433ff70;}
-}
-.zapier-cta {
-  border:none;
-  padding:9px 26px 9px 26px;
-  border-radius:12px;
-  background:linear-gradient(90deg,#24c6dc 40%,#5433ff 100%);
-  color:#fff; font-size:1.3em;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',sans-serif;
-  font-weight:800; letter-spacing:0.03em;
-  box-shadow:0 1px 13px #5433ff38;
-  cursor:pointer; transition:.15s;
-  animation: ctaPulse 2.6s infinite;
-}
-@keyframes ctaPulse {
-  0%,100%{filter:brightness(.93);}
-  45%{filter:brightness(1.16);}
-}
-.zapier-cta:active {
-  background:linear-gradient(90deg,#5433ff 40%,#24c6dc 100%);
-  box-shadow:0 2px 30px #24c6dc99;
-  transform:scale(.97);
-}
-</style>
-
-<div class="zapier-banner-mini">
-  <button class="zapier-cta" onclick="document.querySelector('zapier-interfaces-chatbot-embed').open()">
-    Chat-010io-GPT
-  </button>
-  <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-  <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmgpo0cn80014i1w7f7wg63ua'></zapier-interfaces-chatbot-embed>
-</div>
-
-    <div class="bluesky-embed-container">
-        <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:lacbc2nuvnxryq3zc5j5cmxw/app.bsky.feed.post/3m36tc57ryk2j" data-bluesky-cid="bafyreigjjc4sveiv75insmiyjkltlhvw6yfnr6feh73x7zw72cgas4c3lq">
-            <p lang="uk">
-                ⚡️ 010io = Igor Omelchenko (Kharkiv 🇺🇦)<br/>
-                Mesh-net arch, sys-int hustler, AI tinkerer, digital creator.<br/>
-                💻 Android LLMs, Termux hacks, TP-Link/MiFi rigs, Python/JS/PowerShell — proper hands-on, no fluff.<br/>
-                🎧 Drops code &amp; beats: soundcloud.com/igor-omelche...<br/>
-                <br/>
-                — IhorYan 🇺🇦🇮🇱🇦🇲 (@010io.bsky.social) <a href="https://bsky.app/profile/did:plc:lacbc2nuvnxryq3zc5j5cmxw/post/3m36tc57ryk2j?ref_src=embed">15 жовтня 2025 р. о 01:57</a>
-            </p>
-        </blockquote>
-        <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-    </div>
-    <h2 id="-ai-проєкти">🤖 AI-проєкти</h2>
-    <p>🚧 В розробці:</p>
-    <ul>
-        <li>AI-асистент для навчання — чат-бот на базі LLM для відповідей на питання з програмування</li>
-        <li>Image Generation Demo — веб-інтерфейс для генерації зображень через Stable Diffusion</li>
-        <li>Text Summarizer — інструмент для автоматичного скорочення текстів</li>
-    </ul>
-    <p>💡 Ідеї для майбутніх проєктів:</p>
-    <ul>
-        <li>Sentiment Analysis Tool для українських текстів</li>
-        <li>AI-помічник для code review</li>
-        <li>Локальний RAG-додаток з використанням Ollama</li>
-    </ul>
-    <h2 id="-навчальні-матеріали">📚 Навчальні матеріали</h2>
-    <p>Шпаргалки — швидкий довідник з Python, PyTorch, TensorFlow</p>
-    <p>🐍 Python для ML/AI</p>
-    <ul>
-        <li>NumPy основи</li>
-        <li>Pandas для обробки даних</li>
-        <li>Matplotlib &amp; Seaborn візуалізація</li>
-    </ul>
-    <p>🔥 Deep Learning</p>
-    <ul>
-        <li>PyTorch швидкий старт</li>
-        <li>TensorFlow/Keras гайди</li>
-        <li>Transfer Learning техніки</li>
-    </ul>
-    <p>🤖 LLM та NLP</p>
-    <ul>
-        <li>LangChain best practices</li>
-        <li>Prompt Engineering поради</li>
-        <li>RAG (Retrieval-Augmented Generation)</li>
-    </ul>
-    <h2 id="-корисні-ресурси">🔗 Корисні ресурси</h2>
-    <p>Рекомендовані платформи та інструменти для роботи з AI:</p>
-    <p>Платформи для AI/ML</p>
-    <ul>
-        <li><a href="https://huggingface.co/">🤗 Hugging Face</a> — найбільша колекція pre-trained моделей та датасетів</li>
-        <li><a href="https://github.com/">GitHub</a> — репозиторії open-source AI-проєктів</li>
-    </ul>
-    <h2 id="-контакти--соціальні-мережі">📬 Контакти &amp; Соціальні мережі</h2>
-    <ul>
-        <li>GitHub: <a href="https://github.com/010io">@010io</a></li>
-        <li>Bluesky: <a href="https://bsky.app/profile/did:plc:lacbc2nuvnxryq3zc5j5cmxw">@010io.bsky.social</a></li>
-        <li>SoundCloud: <a href="https://soundcloud.com/igor-omelchenko">igor-omelchenko</a></li>
-        <li>README: <a href="https://github.com/010io/010io.github.io/blob/main/README.md">view on GitHub</a></li>
-    </ul>
-    <footer style="text-align: center; margin-top: 40px; color: #8b949e; border-top: 1px solid #21262d; padding-top: 20px;">
-        © 2025 010io | Igor Omelchenko | Kharkiv 🇺🇦
-    </footer>
+    
+    <!-- Bluesky Embed -->
+    <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:example/app.bsky.feed.post/example" data-bluesky-cid="example">
+        <p lang="uk">Bluesky embed placeholder</p>
+    </blockquote>
+    <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+    
+    <hr>
+    
+    <h2>Контакти</h2>
+    <p>Зв'яжіться з нами через наші канали.</p>
+    
+    <!-- Zapier Chatbot Embed at the end -->
+    <zapier-interfaces-chatbot-embed
+        is-popup="true"
+        chatbot-id="your-chatbot-id"
+        style="z-index:999999;"
+    ></zapier-interfaces-chatbot-embed>
+    <script src="https://cdn.jsdelivr.net/npm/@zapier/chatbot-embed/dist/chatbot-embed.umd.js"></script>
 </body>
 </html>
