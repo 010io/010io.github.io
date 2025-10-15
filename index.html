@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>010io - GitHub Pages</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -18,6 +23,12 @@
             color: #58a6ff;
             border-bottom: 1px solid #21262d;
             padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 0;
         }
         hr {
             border: 0;
@@ -36,14 +47,42 @@
             padding-left: 20px;
             margin: 20px 0;
             color: #8b949e;
+            font-style: italic;
+        }
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(33, 38, 45, 0.5);
+            border-radius: 8px;
+        }
+        .nav-links a {
+            font-weight: 600;
         }
         .chat-banner {
-            display: inline-block;
-            margin: 30px 0;
-            animation: pulse 2s ease-in-out infinite;
+            background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 30px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         .chat-banner button {
-            background: linear-gradient(135deg, #58a6ff 0%, #1f6feb 100%);
+            background: linear-gradient(135deg, #58a6ff 0%, #8b5cf6 100%);
             color: white;
             border: none;
             padding: 12px 24px;
@@ -61,6 +100,21 @@
         .chat-banner button:active {
             transform: translateY(0);
         }
+        .bluesky-embed {
+            background: rgba(33, 38, 45, 0.5);
+            border-left: 4px solid #1DA1F2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-style: normal;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #21262d;
+            text-align: center;
+            color: #8b949e;
+        }
         @keyframes pulse {
             0%, 100% {
                 opacity: 1;
@@ -73,34 +127,82 @@
 </head>
 <body>
     <h1>010io - GitHub Pages</h1>
-    <p>Ласкаво просимо на сторінку 010io!</p>
+    
+    <div class="nav-links">
+        <a href="#about">Про мене</a>
+        <a href="#projects">AI Проєкти</a>
+        <a href="#learning">Навчання</a>
+        <a href="#resources">Ресурси</a>
+        <a href="#contact">Контакти</a>
+    </div>
     
     <hr>
     
-    <h2>Про проект</h2>
-    <p>Це мінімалістична сторінка для демонстрації проектів та інтеграцій.</p>
+    <h2 id="about">Про мене</h2>
+    <blockquote>
+        <p>Привіт! Я досліджую штучний інтелект, машинне навчання та сучасні веб-технології. Мій фокус — створення корисних AI-рішень та навчальних матеріалів українською мовою.</p>
+    </blockquote>
     
-    <!-- Minimal Animated Chat Banner -->
+    <hr>
+    
+    <h2 id="projects">🤖 AI Проєкти</h2>
+    <ul>
+        <li><a href="https://github.com/010io/ai-chatbot">AI Chatbot</a> - Інтелектуальний чат-бот на основі GPT</li>
+        <li><a href="https://github.com/010io/ml-experiments">ML Experiments</a> - Експерименти з машинним навчанням</li>
+        <li><a href="https://github.com/010io/data-analysis">Data Analysis</a> - Аналіз даних та візуалізація</li>
+    </ul>
+    
+    <hr>
+    
+    <h2 id="learning">📚 Навчальні матеріали</h2>
+    <ul>
+        <li><a href="https://github.com/010io/python-tutorials">Python для початківців</a></li>
+        <li><a href="https://github.com/010io/ai-basics">Основи штучного інтелекту</a></li>
+        <li><a href="https://github.com/010io/web-dev-guide">Сучасна веб-розробка</a></li>
+    </ul>
+    
+    <hr>
+    
+    <h2 id="resources">🔗 Корисні ресурси</h2>
+    <ul>
+        <li><a href="https://openai.com">OpenAI</a> - Дослідження штучного інтелекту</li>
+        <li><a href="https://huggingface.co">Hugging Face</a> - ML моделі та датасети</li>
+        <li><a href="https://github.com">GitHub</a> - Хостинг коду</li>
+        <li><a href="https://stackoverflow.com">Stack Overflow</a> - Спільнота розробників</li>
+    </ul>
+    
+    <hr>
+    
+    <!-- Futuristic Glassmorphism Chat Banner -->
     <div class="chat-banner">
-        <button onclick="window.zapierChat && window.zapierChat.open();">Chat-010io-GPT</button>
+        <button onclick="window.zapierChat && window.zapierChat.open();">💬 Chat-010io-GPT</button>
     </div>
     
-    <!-- Bluesky Embed -->
-    <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:example/app.bsky.feed.post/example" data-bluesky-cid="example">
-        <p lang="uk">Bluesky embed placeholder</p>
+    <!-- Interactive Bluesky Post Card -->
+    <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:dcsb6otkmdzumvixzh2qafnb/app.bsky.feed.post/3ld5kbnfnb22k" data-bluesky-cid="bafyreiabmqzxnzgaiqz5rcnxifm3iabp5fvgcvx3drhsodgf5rzoehvwsu">
+        <p lang="uk">Слідкуйте за оновленнями проєкту на Bluesky! 🚀</p>
     </blockquote>
     <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
     
     <hr>
     
-    <h2>Контакти</h2>
-    <p>Зв'яжіться з нами через наші канали.</p>
+    <h2 id="contact">📧 Контакти</h2>
+    <p>Зв'яжіться зі мною через:</p>
+    <ul>
+        <li><a href="https://github.com/010io">GitHub</a></li>
+        <li><a href="https://bsky.app/profile/010io.bsky.social">Bluesky</a></li>
+        <li><a href="mailto:contact@010io.com">Email</a></li>
+    </ul>
     
-    <!-- Zapier Chatbot Embed at the end -->
+    <footer>
+        <p>© 2024 010io. Створено з ❤️ для спільноти</p>
+    </footer>
+    
+    <!-- Zapier Chatbot Embed (Popup Mode) -->
     <zapier-interfaces-chatbot-embed
         is-popup="true"
-        chatbot-id="your-chatbot-id"
-        style="z-index:999999;"
+        chatbot-id="cm4mf6c1q0001131mpgknchkh"
+        style="z-index: 999999;"
     ></zapier-interfaces-chatbot-embed>
     <script src="https://cdn.jsdelivr.net/npm/@zapier/chatbot-embed/dist/chatbot-embed.umd.js"></script>
 </body>
