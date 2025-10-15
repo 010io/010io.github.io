@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>010io - GitHub Pages</title>
     <style>
         body {
@@ -68,8 +68,8 @@
         .zapier-banner {
             position: relative;
             margin: 30px 0;
-            padding: 10px 40px;
-            min-height: 60px;
+            padding: 3px 13px;
+            min-height: 20px;
             background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -79,6 +79,7 @@
                         inset 0 0 60px rgba(88, 166, 255, 0.05);
             overflow: hidden;
             animation: borderGlow 3s ease-in-out infinite;
+            cursor: pointer;
         }
         .zapier-banner::before {
             content: '';
@@ -120,11 +121,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 40px;
+            min-height: 15px;
         }
         .banner-cta {
             display: inline-block;
-            padding: 12px 28px;
+            padding: 8px 20px;
             background: linear-gradient(135deg, #58a6ff 0%, #8b5cf6 100%);
             color: #ffffff;
             border-radius: 12px;
@@ -134,6 +135,8 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(88, 166, 255, 0.4);
             animation: titlePulse 2s ease-in-out infinite;
+            border: none;
+            cursor: pointer;
         }
         .banner-cta:hover {
             transform: translateY(-2px);
@@ -158,23 +161,70 @@
         <a href="#-навчальні-матеріали">📚 Навчальні матеріали</a> | 
         <a href="#-корисні-ресурси">🔗 Ресурси</a> | 
         <a href="#-контакти--соціальні-мережі">📬 Контакти</a>
-        <hr>
+        <br/>
         <a href="https://010io.zapier.app/">010io.zapier.app</a> - 010io-GPT
     </div>
     <!-- Glassmorphism Banner -->
-    <div class="zapier-banner">
-        <div class="banner-content">
-            <a class="banner-cta" href="https://010io.zapier.app/" target="_blank">Chat-010io-GPT</a>
-        </div>
-    </div>
+    <!-- Анімований Glassmorphism банер, висота зменшена, кнопка-пульсар "Chat-010io-GPT" (popup) -->
+<style>
+.zapier-banner-mini {
+  position: relative;
+  margin: 16px 0 12px 0;
+  padding: 10px 0 4px 0;
+  min-height: 40px;
+  max-width: 340px;
+  background: linear-gradient(112deg,rgba(58,140,255,0.17) 0%,rgba(121,56,255,0.12) 100%);
+  backdrop-filter: blur(7.2px) saturate(140%);
+  border-radius: 17px;
+  border: 1.5px solid rgba(255,255,255,0.16);
+  box-shadow: 0 2px 24px #0097a726, 0 0 8px #5433ff70;
+  overflow: hidden;
+  animation: glassGlow 3.2s infinite alternate;
+  display:flex; align-items:center; justify-content:center;
+}
+@keyframes glassGlow {
+  0% {box-shadow:0 2px 24px #0097a72a,0 0 3px #5433ff32;}
+  70%{box-shadow:0 6px 32px #1997ef61,0 0 18px #5433ff55;}
+  100%{box-shadow:0 2px 24px #0097a726,0 0 8px #5433ff70;}
+}
+.zapier-cta {
+  border:none;
+  padding:9px 26px 9px 26px;
+  border-radius:12px;
+  background:linear-gradient(90deg,#24c6dc 40%,#5433ff 100%);
+  color:#fff; font-size:1.3em;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',sans-serif;
+  font-weight:800; letter-spacing:0.03em;
+  box-shadow:0 1px 13px #5433ff38;
+  cursor:pointer; transition:.15s;
+  animation: ctaPulse 2.6s infinite;
+}
+@keyframes ctaPulse {
+  0%,100%{filter:brightness(.93);}
+  45%{filter:brightness(1.16);}
+}
+.zapier-cta:active {
+  background:linear-gradient(90deg,#5433ff 40%,#24c6dc 100%);
+  box-shadow:0 2px 30px #24c6dc99;
+  transform:scale(.97);
+}
+</style>
+
+<div class="zapier-banner-mini">
+  <button class="zapier-cta" onclick="document.querySelector('zapier-interfaces-chatbot-embed').open()">
+    Chat-010io-GPT
+  </button>
+  <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+  <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmgpo0cn80014i1w7f7wg63ua'></zapier-interfaces-chatbot-embed>
+</div>
+
     <div class="bluesky-embed-container">
         <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:lacbc2nuvnxryq3zc5j5cmxw/app.bsky.feed.post/3m36tc57ryk2j" data-bluesky-cid="bafyreigjjc4sveiv75insmiyjkltlhvw6yfnr6feh73x7zw72cgas4c3lq">
             <p lang="uk">
-                ⚡️ 010io = Igor Omelchenko (Kharkiv 🇺🇦)<br>
-                Mesh-net arch, sys-int hustler, AI tinkerer, digital creator.<br>
-                💻 Android LLMs, Termux hacks, TP-Link/MiFi rigs, Python/JS/PowerShell — proper hands-on, no fluff.<br>
-                🎧 Drops code &amp; beats: soundcloud.com/igor-omelche...<br>
-                <br>
+                ⚡️ 010io = Igor Omelchenko (Kharkiv 🇺🇦)<br/>
+                Mesh-net arch, sys-int hustler, AI tinkerer, digital creator.<br/>
+                💻 Android LLMs, Termux hacks, TP-Link/MiFi rigs, Python/JS/PowerShell — proper hands-on, no fluff.<br/>
+                🎧 Drops code &amp; beats: soundcloud.com/igor-omelche...<br/>
+                <br/>
                 — IhorYan 🇺🇦🇮🇱🇦🇲 (@010io.bsky.social) <a href="https://bsky.app/profile/did:plc:lacbc2nuvnxryq3zc5j5cmxw/post/3m36tc57ryk2j?ref_src=embed">15 жовтня 2025 р. о 01:57</a>
             </p>
         </blockquote>
