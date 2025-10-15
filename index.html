@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>010io - GitHub Pages</title>
     <style>
         body {
@@ -68,7 +68,8 @@
         .zapier-banner {
             position: relative;
             margin: 30px 0;
-            padding: 40px;
+            padding: 10px 40px;
+            min-height: 60px;
             background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -116,16 +117,28 @@
             position: relative;
             z-index: 1;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
         }
-        .banner-title {
-            font-size: 2em;
-            font-weight: 600;
+        .banner-cta {
+            display: inline-block;
+            padding: 12px 28px;
             background: linear-gradient(135deg, #58a6ff 0%, #8b5cf6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 15px;
+            color: #ffffff;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(88, 166, 255, 0.4);
             animation: titlePulse 2s ease-in-out infinite;
+        }
+        .banner-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(88, 166, 255, 0.6);
+            text-decoration: none;
         }
         @keyframes titlePulse {
             0%, 100% {
@@ -135,66 +148,25 @@
                 opacity: 0.8;
             }
         }
-        .banner-subtitle {
-            font-size: 1.1em;
-            color: #8b949e;
-            margin-bottom: 25px;
-        }
-        .banner-cta {
-            display: inline-block;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, #58a6ff 0%, #8b5cf6 100%);
-            color: #ffffff;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(88, 166, 255, 0.4);
-        }
-        .banner-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(88, 166, 255, 0.6);
-            text-decoration: none;
-        }
-        .banner-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-            filter: drop-shadow(0 0 20px rgba(88, 166, 255, 0.5));
-            animation: iconFloat 3s ease-in-out infinite;
-        }
-        @keyframes iconFloat {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
     </style>
 </head>
 <body>
     <h1>🔥 Вітаю на 010io!</h1>
-
     <h2>📑 Навігація</h2>
     <div class="navigation">
         <a href="#-ai-проєкти">🤖 AI-проєкти</a> | 
         <a href="#-навчальні-матеріали">📚 Навчальні матеріали</a> | 
         <a href="#-корисні-ресурси">🔗 Ресурси</a> | 
         <a href="#-контакти--соціальні-мережі">📬 Контакти</a>
-        <br>
+        <hr>
         <a href="https://010io.zapier.app/">010io.zapier.app</a> - 010io-GPT
     </div>
-
     <!-- Glassmorphism Banner -->
     <div class="zapier-banner">
         <div class="banner-content">
-            <div class="banner-icon">🤖</div>
-            <h2 class="banner-title">010io-GPT Chatbot</h2>
-            <p class="banner-subtitle">Розмовляй з AI-асистентом на базі Zapier</p>
-            <a href="https://010io.zapier.app/" class="banner-cta" target="_blank">Спробувати зараз →</a>
+            <a class="banner-cta" href="https://010io.zapier.app/" target="_blank">Chat-010io-GPT</a>
         </div>
     </div>
-
     <div class="bluesky-embed-container">
         <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:lacbc2nuvnxryq3zc5j5cmxw/app.bsky.feed.post/3m36tc57ryk2j" data-bluesky-cid="bafyreigjjc4sveiv75insmiyjkltlhvw6yfnr6feh73x7zw72cgas4c3lq">
             <p lang="uk">
@@ -208,7 +180,6 @@
         </blockquote>
         <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
     </div>
-
     <h2 id="-ai-проєкти">🤖 AI-проєкти</h2>
     <p>🚧 В розробці:</p>
     <ul>
@@ -222,36 +193,33 @@
         <li>AI-помічник для code review</li>
         <li>Локальний RAG-додаток з використанням Ollama</li>
     </ul>
-
     <h2 id="-навчальні-матеріали">📚 Навчальні матеріали</h2>
     <p>Шпаргалки — швидкий довідник з Python, PyTorch, TensorFlow</p>
-    <h3>🐍 Python для ML/AI</h3>
+    <p>🐍 Python для ML/AI</p>
     <ul>
         <li>NumPy основи</li>
         <li>Pandas для обробки даних</li>
         <li>Matplotlib &amp; Seaborn візуалізація</li>
     </ul>
-    <h3>🔥 Deep Learning</h3>
+    <p>🔥 Deep Learning</p>
     <ul>
         <li>PyTorch швидкий старт</li>
         <li>TensorFlow/Keras гайди</li>
         <li>Transfer Learning техніки</li>
     </ul>
-    <h3>🤖 LLM та NLP</h3>
+    <p>🤖 LLM та NLP</p>
     <ul>
         <li>LangChain best practices</li>
         <li>Prompt Engineering поради</li>
         <li>RAG (Retrieval-Augmented Generation)</li>
     </ul>
-
     <h2 id="-корисні-ресурси">🔗 Корисні ресурси</h2>
     <p>Рекомендовані платформи та інструменти для роботи з AI:</p>
-    <h3>Платформи для AI/ML</h3>
+    <p>Платформи для AI/ML</p>
     <ul>
         <li><a href="https://huggingface.co/">🤗 Hugging Face</a> — найбільша колекція pre-trained моделей та датасетів</li>
         <li><a href="https://github.com/">GitHub</a> — репозиторії open-source AI-проєктів</li>
     </ul>
-
     <h2 id="-контакти--соціальні-мережі">📬 Контакти &amp; Соціальні мережі</h2>
     <ul>
         <li>GitHub: <a href="https://github.com/010io">@010io</a></li>
@@ -259,7 +227,6 @@
         <li>SoundCloud: <a href="https://soundcloud.com/igor-omelchenko">igor-omelchenko</a></li>
         <li>README: <a href="https://github.com/010io/010io.github.io/blob/main/README.md">view on GitHub</a></li>
     </ul>
-
     <footer style="text-align: center; margin-top: 40px; color: #8b949e; border-top: 1px solid #21262d; padding-top: 20px;">
         © 2025 010io | Igor Omelchenko | Kharkiv 🇺🇦
     </footer>
