@@ -42,117 +42,72 @@
         a:hover {
             text-decoration: underline;
         }
-        blockquote {
-            border-left: 4px solid #58a6ff;
-            padding-left: 20px;
-            margin: 20px 0;
-            color: #8b949e;
-            font-style: italic;
-        }
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
         }
         li {
-            margin-bottom: 8px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-            padding: 15px;
-            background: rgba(33, 38, 45, 0.5);
-            border-radius: 8px;
-        }
-        .nav-links a {
-            font-weight: 600;
+            margin: 10px 0;
         }
         .chat-banner {
-            background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(88, 166, 255, 0.3);
-            border-radius: 16px;
-            padding: 24px;
-            margin: 30px 0 20px 0;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid #58a6ff;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         .chat-banner button {
-            background: linear-gradient(135deg, #58a6ff 0%, #8b5cf6 100%);
-            color: white;
+            background: #58a6ff;
+            color: #0d1117;
             border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 12px 30px;
             font-size: 16px;
-            font-weight: 600;
+            border-radius: 6px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+            font-weight: 600;
         }
         .chat-banner button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(88, 166, 255, 0.4);
-        }
-        .chat-banner button:active {
-            transform: translateY(0);
+            background: #79b8ff;
         }
         .bluesky-embed {
-            background: rgba(33, 38, 45, 0.5);
-            border-left: 4px solid #1DA1F2;
+            margin: 30px 0;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            font-style: normal;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
         }
         footer {
-            margin-top: 40px;
+            margin-top: 50px;
             padding-top: 20px;
             border-top: 1px solid #21262d;
             text-align: center;
             color: #8b949e;
         }
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.8;
-            }
-        }
     </style>
 </head>
 <body>
-    <h1>010io - GitHub Pages</h1>
-    
-    <div class="nav-links">
-        <a href="#about">Про мене</a>
-        <a href="#projects">AI Проєкти</a>
-        <a href="#learning">Навчання</a>
-        <a href="#resources">Ресурси</a>
-        <a href="#contact">Контакти</a>
-    </div>
+    <h1>👋 Вітаю на 010io GitHub Pages</h1>
+    <p>Ласкаво просимо до мого особистого простору проєктів, експериментів та навчальних матеріалів!</p>
     
     <hr>
     
-    <h2 id="about">Про мене</h2>
-    <blockquote>
-        <p>Привіт! Я досліджую штучний інтелект, машинне навчання та сучасні веб-технології. Мій фокус — створення корисних AI-рішень та навчальних матеріалів українською мовою.</p>
-    </blockquote>
+    <h2 id="about">👨‍💻 Про мене</h2>
+    <p>Я захоплююся технологіями, штучним інтелектом та веб-розробкою. Тут ви знайдете мої проєкти, навчальні матеріали та корисні ресурси.</p>
     
-    <hr>
-    
-    <h2 id="projects">🤖 AI Проєкти</h2>
+    <h2 id="projects">🚀 Проєкти</h2>
     <ul>
-        <li><a href="https://github.com/010io/ai-chatbot">AI Chatbot</a> - Інтелектуальний чат-бот на основі GPT</li>
+        <li><a href="https://github.com/010io/webapp">Web Application</a> - Сучасний веб-додаток</li>
+        <li><a href="https://github.com/010io/api-service">API Service</a> - RESTful API сервіс</li>
+        <li><a href="https://github.com/010io/mobile-app">Mobile App</a> - Мобільний додаток</li>
+    </ul>
+    
+    <h2 id="ai-projects">🤖 AI-проєкти</h2>
+    <ul>
+        <li><a href="https://github.com/010io/chatbot">AI Chatbot</a> - Розумний чат-бот</li>
         <li><a href="https://github.com/010io/ml-experiments">ML Experiments</a> - Експерименти з машинним навчанням</li>
         <li><a href="https://github.com/010io/data-analysis">Data Analysis</a> - Аналіз даних та візуалізація</li>
     </ul>
-    
-    <hr>
     
     <h2 id="learning">📚 Навчальні матеріали</h2>
     <ul>
@@ -160,8 +115,6 @@
         <li><a href="https://github.com/010io/ai-basics">Основи штучного інтелекту</a></li>
         <li><a href="https://github.com/010io/web-dev-guide">Сучасна веб-розробка</a></li>
     </ul>
-    
-    <hr>
     
     <h2 id="resources">🔗 Корисні ресурси</h2>
     <ul>
@@ -171,7 +124,18 @@
         <li><a href="https://stackoverflow.com">Stack Overflow</a> - Спільнота розробників</li>
     </ul>
     
-    <hr>
+    <h2 id="my-repositories">📦 Мої репозиторії</h2>
+    <ul>
+        <li><a href="https://github.com/010io/universal-reader-mode">universal-reader-mode</a> - Універсальний режим читання для веб-сторінок</li>
+        <li><a href="https://github.com/010io/apple-ios-purchased-legacy">apple-ios-purchased-legacy</a> - Архів придбаних iOS додатків та ресурсів</li>
+        <li><a href="https://github.com/010io/Smart-NFC-Wallet-Provisioning">Smart-NFC-Wallet-Provisioning</a> - Розумне забезпечення NFC-гаманців</li>
+        <li><a href="https://github.com/010io/MCP_veyrax">MCP_veyrax</a> - Model Context Protocol для veyrax</li>
+        <li><a href="https://github.com/010io/gemini-memory">gemini-memory</a> - Система пам'яті для Gemini AI</li>
+        <li><a href="https://github.com/010io/mesh-api-cli">mesh-api-cli</a> - CLI інструмент для Mesh API</li>
+        <li><a href="https://github.com/010io/voice-over-translation_uk">voice-over-translation_uk</a> - Голосовий переклад українською</li>
+        <li><a href="https://github.com/010io/vot.js">vot.js</a> - JavaScript бібліотека для voice-over перекладу</li>
+        <li><a href="https://github.com/010io/cloudstream-extensions-uk">cloudstream-extensions-uk</a> - Українські розширення для Cloudstream</li>
+    </ul>
     
     <!-- Futuristic Glassmorphism Chat Banner -->
     <div class="chat-banner">
@@ -183,8 +147,6 @@
         <p lang="uk">Слідкуйте за оновленнями проєкту на Bluesky! 🚀</p>
     </blockquote>
     <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-    
-    <hr>
     
     <h2 id="contact">📧 Контакти</h2>
     <p>Зв'яжіться зі мною через:</p>
