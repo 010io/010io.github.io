@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>010io - GitHub Pages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        h1, h2, h3 {
+            color: #58a6ff;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #21262d;
+            margin: 20px 0;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .chat-banner {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid #58a6ff;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .chat-banner button {
+            background: #58a6ff;
+            color: #0d1117;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .chat-banner button:hover {
+            background: #79b8ff;
+        }
+        .bluesky-embed {
+            margin: 30px 0;
+            padding: 20px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+        }
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #21262d;
+            text-align: center;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+    <h1>👋 Вітаю на 010io GitHub Pages</h1>
+    <p>Ласкаво просимо до мого особистого простору проєктів, експериментів та навчальних матеріалів!</p>
+    
+    <hr>
+    
+    <h2 id="about">👨‍💻 Про мене</h2>
+    <p>Я захоплююся технологіями, штучним інтелектом та веб-розробкою. Тут ви знайдете мої проєкти, навчальні матеріали та корисні ресурси.</p>
+    
+    <h2 id="projects">🚀 Проєкти</h2>
+    <ul>
+        <li><a href="https://github.com/010io/webapp">Web Application</a> - Сучасний веб-додаток</li>
+        <li><a href="https://github.com/010io/api-service">API Service</a> - RESTful API сервіс</li>
+        <li><a href="https://github.com/010io/mobile-app">Mobile App</a> - Мобільний додаток</li>
+    </ul>
+    
+    <h2 id="ai-projects">🤖 AI-проєкти</h2>
+    <ul>
+        <li><a href="https://github.com/010io/chatbot">AI Chatbot</a> - Розумний чат-бот</li>
+        <li><a href="https://github.com/010io/ml-experiments">ML Experiments</a> - Експерименти з машинним навчанням</li>
+        <li><a href="https://github.com/010io/data-analysis">Data Analysis</a> - Аналіз даних та візуалізація</li>
+    </ul>
+    
+    <h2 id="learning">📚 Навчальні матеріали</h2>
+    <ul>
+        <li><a href="https://github.com/010io/python-tutorials">Python для початківців</a></li>
+        <li><a href="https://github.com/010io/ai-basics">Основи штучного інтелекту</a></li>
+        <li><a href="https://github.com/010io/web-dev-guide">Сучасна веб-розробка</a></li>
+    </ul>
+    
+    <h2 id="resources">🔗 Корисні ресурси</h2>
+    <ul>
+        <li><a href="https://openai.com">OpenAI</a> - Дослідження штучного інтелекту</li>
+        <li><a href="https://huggingface.co">Hugging Face</a> - ML моделі та датасети</li>
+        <li><a href="https://github.com">GitHub</a> - Хостинг коду</li>
+        <li><a href="https://stackoverflow.com">Stack Overflow</a> - Спільнота розробників</li>
+    </ul>
+    
+    <h2 id="my-repositories">📦 Мої репозиторії</h2>
+    <ul>
+        <li><a href="https://github.com/010io/universal-reader-mode">universal-reader-mode</a> - Універсальний режим читання для веб-сторінок</li>
+        <li><a href="https://github.com/010io/apple-ios-purchased-legacy">apple-ios-purchased-legacy</a> - Архів придбаних iOS додатків та ресурсів</li>
+        <li><a href="https://github.com/010io/Smart-NFC-Wallet-Provisioning">Smart-NFC-Wallet-Provisioning</a> - Розумне забезпечення NFC-гаманців</li>
+        <li><a href="https://github.com/010io/MCP_veyrax">MCP_veyrax</a> - Model Context Protocol для veyrax</li>
+        <li><a href="https://github.com/010io/gemini-memory">gemini-memory</a> - Система пам'яті для Gemini AI</li>
+        <li><a href="https://github.com/010io/mesh-api-cli">mesh-api-cli</a> - CLI інструмент для Mesh API</li>
+        <li><a href="https://github.com/010io/voice-over-translation_uk">voice-over-translation_uk</a> - Голосовий переклад українською</li>
+        <li><a href="https://github.com/010io/vot.js">vot.js</a> - JavaScript бібліотека для voice-over перекладу</li>
+        <li><a href="https://github.com/010io/cloudstream-extensions-uk">cloudstream-extensions-uk</a> - Українські розширення для Cloudstream</li>
+    </ul>
+    
+    <!-- Futuristic Glassmorphism Chat Banner -->
+    <div class="chat-banner">
+        <button onclick="window.zapierChat && window.zapierChat.open();">💬 Chat-010io-GPT</button>
+    </div>
+    
+    <!-- Interactive Bluesky Post Card -->
+    <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:dcsb6otkmdzumvixzh2qafnb/app.bsky.feed.post/3ld5kbnfnb22k" data-bluesky-cid="bafyreiabmqzxnzgaiqz5rcnxifm3iabp5fvgcvx3drhsodgf5rzoehvwsu">
+        <p lang="uk">Слідкуйте за оновленнями проєкту на Bluesky! 🚀</p>
+    </blockquote>
+    <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+    
+    <h2 id="contact">📧 Контакти</h2>
+    <p>Зв'яжіться зі мною через:</p>
+    <ul>
+        <li><a href="https://github.com/010io">GitHub</a></li>
+        <li><a href="https://bsky.app/profile/010io.bsky.social">Bluesky</a></li>
+        <li><a href="mailto:contact@010io.com">Email</a></li>
+    </ul>
+    
+    <footer>
+        <p>© 2024 010io. Створено з ❤️ для спільноти</p>
+    </footer>
+
+
+    <h2 id="contacts-support">📧 Zв'язок та підтримка</h2>
+<div style="display:flex; flex-wrap:wrap; gap:13px; margin-bottom:20px;">
+  <a href="https://t.me/t010io" target="_blank" rel="noopener" title="Telegram" style="...">Telegram</a>
+  <a href="https://x.com/X010io" target="_blank" rel="noopener" title="X (Twitter)" style="...">X / Twitter</a>
+  <a href="https://www.instagram.com/x010io" target="_blank" rel="noopener" title="Instagram" style="...">Instagram</a>
+  <a href="https://discord.gg/010io" target="_blank" rel="noopener" title="Discord" style="...">Discord</a>
+  <a href="https://bsky.app/profile/010io.bsky.social" target="_blank" rel="noopener" title="Bluesky" style="...">Bluesky</a>
+  <a href="https://open.spotify.com/artist/16jo2zGRmbAch9vlS04bTC" target="_blank" rel="noopener" title="Spotify" style="...">Spotify</a>
+  <a href="https://pplx.ai/010io" target="_blank" rel="noopener" title="Perplexity Referral" style="..."><b>PPLX PRO бонус</b></a>
+  <a href="https://buymeacoffee.com/010io" target="_blank" rel="noopener" title="BuyMeACoffee" style="...">BuyMeACoffee</a>
+  <a href="mailto:contact@010io.com" target="_blank" rel="noopener" title="Email" style="...">Email</a>
+  <a href="https://github.com/010io" target="_blank" rel="noopener" title="GitHub" style="...">GitHub</a>
+  <a href="https://linktr.ee/010io" target="_blank" rel="noopener" title="Linktree" style="...">Linktree</a>
+</div>
+<!-- PayPal donate official button -->
+<div style="margin:14px 0;">
+  <form action="https://www.paypal.com/donate" method="post" target="_blank" rel="noopener">
+    <input type="hidden" name="hosted_button_id" value="QRFY3HRAPV23G"/>
+    <button type="submit" style="padding:10px 22px;background:#0070ba;border-radius:10px;border:none;color:#fff;font-weight:700;cursor:pointer;">
+      💳 Підтримати через PayPal
+    </button>
+  </form>
+</div>
+<!-- Bitcoin wallet and QR -->
+<div style="margin:11px 0;">
+  <b>Bitcoin (BTC):</b>
+  <span style="background:#f5f5f5;padding:4px 8px;border-radius:6px;font-family:monospace;">
+    bc1qexampleaddress010iobtc90385vzk
+  </span>
+  <br>
+  <img src="https://chart.googleapis.com/chart?chs=142x142&cht=qr&chl=bitcoin:bc1qexampleaddress010iobtc90385vzk&choe=UTF-8" alt="BTC QR" style="margin-top:5px;border-radius:8px;">
+</div>
+
+
+
+    
+    <!-- Zapier Chatbot Embed (Popup Mode) -->
+    <zapier-interfaces-chatbot-embed
+        is-popup="true"
+        chatbot-id="cm4mf6c1q0001131mpgknchkh"
+        style="z-index: 999999;"
+    ></zapier-interfaces-chatbot-embed>
+    <script src="https://cdn.jsdelivr.net/npm/@zapier/chatbot-embed/dist/chatbot-embed.umd.js"></script>
+</body>
+</html>
