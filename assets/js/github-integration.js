@@ -2,7 +2,12 @@ class GitHubIntegration {
     constructor(username = '010io') {
         this.username = username;
         this.apiBase = 'https://api.github.com';
-        this.cache = new Map();
+        this.init();
+    }
+
+    async init() {
+        await this.renderAll();
+        setInterval(() => this.renderAll(), 5 * 60 * 1000);
     }
 
     async fetchWithCache(endpoint) {
@@ -19,10 +24,7 @@ class GitHubIntegration {
             if (!response.ok) throw new Error('API Error');
             const data = await response.json();
             
-            localStorage.setItem(cacheKey, JSON.stringify({
-                data,
-                timestamp: Date.now()
-            }));
+            localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: Date.now() }));
             return data;
         } catch (e) {
             console.error(e);
@@ -30,17 +32,9 @@ class GitHubIntegration {
         }
     }
 
-    async getRepos() {
-        return await this.fetchWithCache(`/users/${this.username}/repos?sort=pushed&per_page=100`);
-    }
-
-    async getGists() {
-        return await this.fetchWithCache(`/users/${this.username}/gists?per_page=20`);
-    }
-
     async renderAll() {
-        const repos = await this.getRepos();
-        const gists = await this.getGists();
+        const repos = await this.fetchWithCache(`/users/${this.username}/repos?sort=pushed&per_page=100`);
+        const gists = await this.fetchWithCache(`/users/${this.username}/gists?per_page=20`);
 
         const mainProjects = repos.filter(r => !r.archived).slice(0, 6);
         this.renderGrid('dynamic-projects', mainProjects, 'repo');
@@ -58,14 +52,14 @@ class GitHubIntegration {
         container.innerHTML = items.map(item => `
             <div class="project-card ${type}-card">
                 <h3>${item.name}</h3>
-                <p>${item.description || 'No description provided.'}</p>
+                <p>${item.description || 'No description'}</p>
                 <div class="meta">
                     <span>⭐ ${item.stargazers_count || 0}</span>
                     <span>${item.language || 'Code'}</span>
                 </div>
                 <div class="actions">
                     <a href="${item.html_url}" target="_blank" class="btn small">Source</a>
-                    ${item.has_pages ? `<a href="https://${this.username}.github.io/${item.name}" target="_blank" class="btn small highlight">Live Site</a>` : ''}
+                    ${item.has_pages ? `<a href="https://${this.username}.github.io/${item.name}" target="_blank" class="btn small highlight">Live</a>` : ''}
                 </div>
             </div>
         `).join('');
@@ -89,5 +83,5 @@ class GitHubIntegration {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new GitHubIntegration().renderAll();
+    new GitHubIntegration();
 });

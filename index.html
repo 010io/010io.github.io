@@ -4,26 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>010io | Digital Nexus</title>
-    <meta name="description" content="Igor Omelchenko (010io) - Mesh-Architect, Creator of Ohm's Infinity Formula, Yana BiTransparent Visionary." />
+    <meta name="description" content="Igor Omelchenko (010io) - Mesh-Architect, AI-Integrator" />
     
-    <!-- PWA Meta -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#00ff41">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="010io">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="assets/css/enhanced-styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" as="style">
     
     <link rel="stylesheet" href="assets/css/enhanced-styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
-    
-    <script type="module" src="assets/js/web-llm-chat.js"></script>
     <script src="assets/js/app-features.js"></script>
 </head>
 <body>
+    <canvas id="matrix-bg"></canvas>
+    
     <div class="yana-hud-line"></div>
     <nav class="matrix-nav">
         <span class="brand">[ 010io ]</span>
@@ -33,6 +26,7 @@
             <a href="#gists">Scripts</a>
             <a href="#yana">Yana</a>
             <a href="#ai-core" class="ai-trigger">AI Core</a>
+            <a href="#game">Game</a>
         </div>
     </nav>
 
@@ -44,7 +38,7 @@
             <p class="terminal-text">
                 > IDENTITY: Igor Omelchenko<br>
                 > ROLE: Mesh-Architect | AI-Integrator<br>
-                > MISSION: <span class="highlight">Yana BiTransparent</span> implementation<br>
+                > MISSION: Yana BiTransparent implementation<br>
                 > STATUS: <span class="blink">ONLINE</span>
             </p>
             <div class="formula-ohm">
@@ -55,8 +49,8 @@
         <section class="donate-section">
             <div class="mono-card glass-panel">
                 <div class="mono-content">
-                    <h3>🐈 Підтримати Mesh-розвиток</h3>
-                    <p>Транзакція на розвиток відкритого коду та екосистеми.</p>
+                    <h3>🐈 Підтримати розвиток (ЗСУ)</h3>
+                    <p>Донат на розвиток відкритого коду та підтримку України 🇺🇦</p>
                 </div>
                 <a href="https://send.monobank.ua/jar/7H627ez1JH" target="_blank" rel="noopener" class="mono-btn">
                     <span class="btn-icon">💳</span>
@@ -73,7 +67,7 @@
         </section>
         
         <section id="yana">
-            <h2>// SATELLITE PAGES</h2>
+            <h2>// YANA BiTransparent (Diia Hackathon)</h2>
             <div id="pages-grid" class="grid-layout">
             </div>
         </section>
@@ -82,53 +76,84 @@
             <h2>// BROWSER AUGMENTATIONS (Gists)</h2>
             <div id="gists-grid" class="list-layout"></div>
         </section>
+
+        <section id="social">
+            <h2>// SOCIAL ACTIVITY</h2>
+            <div id="social-feed" class="list-layout"></div>
+        </section>
+
+        <section id="game">
+            <h2>// RETRO GAME: PixelMesh</h2>
+            <div id="game-container" class="game-wrapper">
+                <canvas id="game-canvas" width="800" height="400"></canvas>
+                <div id="game-info">Use Arrow Keys to move, Space to shoot</div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>// CONTACTS & SUPPORT</h2>
+            <div class="social-links">
+                <a href="https://github.com/010io" target="_blank">🐙 GitHub</a>
+                <a href="https://bsky.app/profile/010io.bsky.social" target="_blank">🦋 Bluesky</a>
+                <a href="https://t.me/t010io" target="_blank">📱 Telegram</a>
+                <a href="https://x.com/X010io" target="_blank">🐦 X/Twitter</a>
+                <a href="https://www.instagram.com/x010io" target="_blank">📸 Instagram</a>
+                <a href="https://discord.gg/010io" target="_blank">🎮 Discord</a>
+                <a href="https://open.spotify.com/artist/16jo2zGRmbAch9vlS04bTC" target="_blank">🎧 Spotify</a>
+                <a href="https://soundcloud.com/igor-omelchenko" target="_blank">🎵 SoundCloud</a>
+                <a href="https://buymeacoffee.com/010io" target="_blank">☕ Buy Me Coffee</a>
+                <a href="https://pplx.ai/010io" target="_blank">🧠 PPLX PRO</a>
+                <a href="mailto:contact@010io.com">📧 Email</a>
+                <a href="https://linktr.ee/010io" target="_blank">🔗 Linktree</a>
+            </div>
+            
+            <div class="payment-section">
+                <h3>💳 PayPal</h3>
+                <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                    <input type="hidden" name="hosted_button_id" value="QRFY3HRAPV23G"/>
+                    <button type="submit" class="btn">Donate via PayPal</button>
+                </form>
+            </div>
+
+            <div class="payment-section">
+                <h3>₿ Bitcoin</h3>
+                <code>1LEH67k3fbTyo4r1EFtz15zcoMQLJFpCLz</code>
+            </div>
+        </section>
     </main>
 
     <div id="ai-interface" class="ai-panel hidden">
         <div class="ai-header">
-            <span>🤖 010io-Local-LLM</span>
+            <span>🤖 Local LLM</span>
             <button id="close-ai">×</button>
+        </div>
+        <div id="model-selector" class="model-selector">
+            <label>Model Size:</label>
+            <select id="model-choice">
+                <option value="none">Disabled (No Download)</option>
+                <option value="tiny">Tiny (100MB) - Fast</option>
+                <option value="small">Small (500MB) - Balanced</option>
+                <option value="medium">Medium (2GB) - Better</option>
+                <option value="large">Large (4GB+) - Best</option>
+            </select>
+            <small>⚠️ Models cache in browser. First load takes time.</small>
         </div>
         <div id="chat-history" class="chat-box">
             <div class="system-msg">
-                Ініціалізація WebGPU...<br>
-                Модель завантажується на твій пристрій (кешується).<br>
-                Твій трафік не виходить за межі браузера.
+                Select model size above.<br>
+                Models download once and cache locally.
             </div>
         </div>
         <div class="input-area">
-            <input type="text" id="user-input" placeholder="Введи команду або запит..." disabled>
-            <button id="send-btn" disabled>RUN</button>
+            <input type="text" id="user-input" placeholder="Type message..." disabled>
+            <button id="send-btn" disabled>Send</button>
         </div>
         <div id="download-progress" class="progress-bar"></div>
     </div>
 
     <script src="assets/js/github-integration.js"></script>
-    <script src="assets/js/auto-update-portfolio.js"></script>
-    
-    <!-- Performance & Analytics -->
-    <script>
-        // Performance monitoring
-        window.addEventListener('load', () => {
-            const perfData = performance.getEntriesByType('navigation')[0];
-            console.log(`Page loaded in ${perfData.loadEventEnd - perfData.fetchStart}ms`);
-        });
-        
-        // Error tracking
-        window.addEventListener('error', (e) => {
-            console.error('App Error:', e.error);
-        });
-        
-        // Smooth navigation
-        document.addEventListener('click', (e) => {
-            if (e.target.matches('a[href^="#"]')) {
-                e.preventDefault();
-                const target = document.querySelector(e.target.getAttribute('href'));
-                if (target && window.AppFeatures) {
-                    new AppFeatures().smoothScrollTo(target);
-                }
-            }
-        });
-    </script>
+    <script src="assets/js/social-sync.js"></script>
+    <script src="assets/js/pixel-mesh-game.js"></script>
+    <script src="assets/js/matrix-bg.js"></script>
 </body>
 </html>

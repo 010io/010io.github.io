@@ -31,15 +31,30 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background: var(--bg-dark);
     color: var(--text);
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
     transition: all 0.3s ease;
-    overflow-x: hidden;
+    position: relative;
 }
 
-/* Yana HUD Line */
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
 .yana-hud-line {
     position: fixed;
     top: 0;
@@ -57,7 +72,6 @@ body {
     50% { opacity: 1; }
 }
 
-/* Navigation */
 .matrix-nav {
     position: fixed;
     top: 20px;
@@ -84,6 +98,7 @@ body {
 .nav-links {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -92,7 +107,6 @@ body {
     padding: 8px 12px;
     border-radius: 15px;
     transition: all 0.3s ease;
-    position: relative;
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -101,7 +115,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Section */
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -116,7 +129,6 @@ body {
     font-size: clamp(3rem, 8vw, 8rem);
     font-weight: bold;
     color: var(--primary);
-    position: relative;
     animation: glitch 2s infinite;
 }
 
@@ -168,7 +180,6 @@ body {
     50% { transform: translateY(-10px); }
 }
 
-/* Sections */
 section {
     padding: 60px 20px;
     max-width: 1200px;
@@ -180,21 +191,8 @@ h2 {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin-bottom: 30px;
     text-align: center;
-    position: relative;
 }
 
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 2px;
-    background: var(--primary);
-}
-
-/* Grid Layouts */
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -208,7 +206,6 @@ h2::after {
     gap: 15px;
 }
 
-/* Cards */
 .project-card, .mono-card {
     background: var(--glass);
     backdrop-filter: blur(10px);
@@ -216,8 +213,6 @@ h2::after {
     border-radius: 15px;
     padding: 25px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 .project-card:hover, .mono-card:hover {
@@ -261,11 +256,6 @@ h2::after {
     color: var(--bg-dark);
 }
 
-/* Monobank Section */
-.donate-section {
-    padding: 40px 20px;
-}
-
 .mono-btn {
     display: flex;
     align-items: center;
@@ -287,7 +277,6 @@ h2::after {
     transform: translateY(-2px);
 }
 
-/* Gists */
 .gist-item {
     display: flex;
     align-items: center;
@@ -310,7 +299,69 @@ h2::after {
     font-weight: bold;
 }
 
-/* AI Interface */
+.activity-item {
+    padding: 12px;
+    background: var(--glass);
+    border-left: 3px solid var(--primary);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-time {
+    color: var(--accent);
+    font-size: 0.8em;
+}
+
+.activity-action {
+    color: var(--text);
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.social-links a {
+    padding: 15px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.payment-section {
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.payment-section h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.payment-section code {
+    background: var(--border);
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    word-break: break-all;
+}
+
 .ai-panel {
     position: fixed;
     bottom: 20px;
@@ -343,6 +394,34 @@ h2::after {
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
+}
+
+.model-selector {
+    padding: 15px;
+    background: var(--glass);
+    border-bottom: 1px solid var(--border);
+}
+
+.model-selector label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.model-selector select {
+    width: 100%;
+    padding: 8px;
+    background: var(--border);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+.model-selector small {
+    display: block;
+    margin-top: 8px;
+    color: var(--accent);
+    font-size: 0.8em;
 }
 
 .chat-box {
@@ -410,17 +489,30 @@ h2::after {
     border-radius: 2px;
     margin: 0 15px 15px;
     transition: width 0.3s ease;
+    width: 0%;
 }
 
-/* Loading Animation */
-.loading-terminal {
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#game-canvas {
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    background: #000;
+    max-width: 100%;
+    height: auto;
+}
+
+#game-info {
+    color: var(--accent);
+    font-size: 0.9em;
     text-align: center;
-    color: var(--primary);
-    font-family: 'Courier New', monospace;
-    animation: blink 1s infinite;
 }
 
-/* Theme Switcher */
 .theme-switcher {
     position: fixed;
     top: 80px;
@@ -431,13 +523,14 @@ h2::after {
     border-radius: 10px;
     padding: 10px;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .theme-btn {
-    display: block;
     width: 40px;
     height: 40px;
-    margin: 5px 0;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -448,21 +541,6 @@ h2::after {
 .theme-btn.light { background: #fff; }
 .theme-btn.contrast { background: linear-gradient(45deg, #000, #ff0); }
 
-/* QR Code */
-.qr-section {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .matrix-nav {
         position: relative;
@@ -489,68 +567,16 @@ h2::after {
     .grid-layout {
         grid-template-columns: 1fr;
     }
-}
-
-@media (min-width: 1920px) {
-    .container {
-        max-width: 1600px;
-    }
     
-    .grid-layout {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    #game-canvas {
+        width: 100%;
+        height: auto;
     }
 }
 
-/* TV/Large Screen */
-@media (min-width: 3840px) {
-    body {
-        font-size: 1.5em;
-    }
-    
-    .matrix-nav {
-        padding: 20px 40px;
-    }
-    
-    .ai-panel {
-        width: 500px;
-        height: 700px;
-    }
-}
-
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-    :root {
-        --bg-dark: #000000;
-        --primary: #ffffff;
-        --accent: #ffff00;
-        --text: #ffffff;
-        --border: #ffffff;
-    }
-}
-
-/* Focus Indicators */
-*:focus {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-}
-
-/* Print Styles */
-@media print {
-    .matrix-nav, .ai-panel, .theme-switcher, .qr-section {
-        display: none;
-    }
-    
-    body {
-        background: white;
-        color: black;
     }
 }
